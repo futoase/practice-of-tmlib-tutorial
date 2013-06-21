@@ -130,8 +130,10 @@ $(document).ready(function() {
             Math.rand(HEART_SIZE / 2, screen.SCREEN_WIDTH - HEART_SIZE / 2),
             Math.rand(HEART_SIZE / 2, screen.SCREEN_HEIGHT - HEART_SIZE)
           );
-          heart.interaction.enabled = true; 
-          heart.interaction.boundingType = "circle";
+
+          heart.setInteractive(true);
+          //heart.interaction.enabled = true; 
+          //heart.interaction.boundingType = "circle";
           heart.addEventListener("pointingend", function() {
             this.remove();
           });
